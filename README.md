@@ -10,3 +10,4 @@ nice to have
 - can use in my website
 - maybe connect to IFFT to send notifications
 - can use address, not just city
+- take weather into account - it it's raining you cant see it!
