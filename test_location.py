@@ -10,4 +10,3 @@ def test_no_file():
 
 def test_file_exists():
     df = pull_address_list('test_address.csv')
-

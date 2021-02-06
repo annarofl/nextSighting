@@ -40,5 +40,4 @@ def visualize_locations(df):
 
     plugins.FastMarkerCluster(data=list(zip(df['latitude'].values, df['longitude'].values))).add_to(folium_map)
     folium.LayerControl().add_to(folium_map)
-    folium_map
-
+    folium_map.save("loc.html")
