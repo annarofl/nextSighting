@@ -7,12 +7,14 @@ import folium.plugins as plugins
 
 
 def pull_address_list(filename="address.csv"):
+
     df = pd.read_csv(filename)
 
     # convert address columns to type string to concat them
     address_columns = ['Address1', 'Address2', 'City', 'State', 'Zip', 'country']
 
     df[address_columns] = df[address_columns].fillna('').astype(str)
+
     df['ADDRESS'] = df[address_columns].agg(', '.join, axis=1)
 
     return df
@@ -35,7 +37,7 @@ def convert_lon_lat(df):
 def visualize_locations(df):
 
     folium_map = folium.Map(location=[30.1690815, -97.83705505214803],
-                            zoom_start=1,
+                            zoom_start=1,  #the world
                             tiles='CartoDB dark_matter')
 
     plugins.FastMarkerCluster(data=list(zip(df['latitude'].values, df['longitude'].values))).add_to(folium_map)
