@@ -13,7 +13,7 @@ jobs:
           python-version: 3.8
       - name: Run unit tests
         run: |
-          pip freeze
+          pip install -r requirements.txt
           pip install pytest
           pytest
       - name: Wemake Python Stylguide
