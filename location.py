@@ -1,4 +1,4 @@
-# import geopandas
+import geopandas
 import geopy
 import pandas as pd
 from geopy.extra.rate_limiter import RateLimiter

@@ -20,7 +20,7 @@ defusedxml==0.6.0
 entrypoints
 Fiona==1.8.18
 folium
-GDAL==3.1.4
+GDAL
 geographiclib==1.50
 geopandas
 geopy
